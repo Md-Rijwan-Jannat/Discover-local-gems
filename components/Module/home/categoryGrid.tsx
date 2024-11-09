@@ -51,13 +51,13 @@ const categories: Category[] = [
 
 const CategoryGrid = () => {
   return (
-    <div className="bg-gradient-to-b from-white to-primary-50/5">
+    <div className="pt-10 mb-28">
       <Container>
-        <div className="flex items-center justify-between gap-3 mb-5">
+        <div className="flex items-center justify-between gap-3 mb-10">
           <h3 className="md:text-[44px] text-xl">Browse by Category</h3>
           <Button
-            className="bg-[#205cb4] rounded-[10px] w-[173px] h-[56px] text-[24px] text-white roboto-regular"
-            endContent={<HiArrowUpRight />}
+            className="bg-[#205cb4] rounded-[10px] w-[130px] md:w-[173px] h-[40px] md:h-[56px] text-[16px] md:text-[24px] text-white roboto-regular"
+            endContent={<HiArrowUpRight size={24} />}
           >
             See All
           </Button>

@@ -79,7 +79,7 @@ export default function Banner() {
                   className=" text-[#205CD4] roboto-regular"
                 />
               }
-              className="w-full sm:w-auto h-[44px] sm:h-[56px] md:w-[173px] md:h-[56px] bg-white text-[#205CD4] text-base md:text-[24px] font-semibold rounded-md md:rounded-[10px]"
+              className="w-full sm:w-auto h-[44px] sm:h-[56px] md:w-[173px] md:h-[56px] bg-white text-[#205CD4] text-base md:text-[24px] font-semibold rounded-md md:rounded-[10px] roboto-regular"
               variant="flat"
             >
               Search

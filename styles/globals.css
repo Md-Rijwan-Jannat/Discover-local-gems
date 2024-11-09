@@ -13,3 +13,15 @@
   font-weight: 600;
   font-style: normal;
 }
+
+.parallax-bg {
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .parallax-bg {
+    background-attachment: fixed;
+  }
+}
