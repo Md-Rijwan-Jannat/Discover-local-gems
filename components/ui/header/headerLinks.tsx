@@ -4,7 +4,6 @@ import { siteConfig } from '@/config/site';
 import { NavbarItem } from '@nextui-org/navbar';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
 
 export default function HeaderLinks() {
   const pathname = usePathname();

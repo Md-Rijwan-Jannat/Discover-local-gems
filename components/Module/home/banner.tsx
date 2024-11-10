@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import searchIcon from '../../../public/homeImages/Banner/searchIcon.png';
@@ -45,7 +47,7 @@ export default function Banner() {
             <p className="w-full md:w-1/2 text-start mt-4 text-sm sm:text-base md:text-lg lg:text-xl roboto-regular">
               Find trusted local businesses that offer reliable services, unique
               products, and exceptional experiences tailored to meet your
-              community's needs.
+              community&apos;s needs.
             </p>
             <h1 className="w-full md:w-1/2 text-3xl sm:text-5xl md:text-6xl lg:text-[110px] font-bold leading-none text-center md:text-right whitespace-nowrap">
               COUNT ON

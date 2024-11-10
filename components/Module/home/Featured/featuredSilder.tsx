@@ -44,6 +44,14 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+  const [slidesPerView, setSlidesPerView] = useState(3);
+
+  useEffect(() => {
+    // Only runs on client side
+    if (typeof window !== 'undefined') {
+      setSlidesPerView(window.innerWidth < 768 ? 1 : 3);
+    }
+  }, []);
 
   const handleNextSlide = () => {
     swiperRef.current?.slideNext();
@@ -68,7 +76,7 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
       <Container>
         <Swiper
           modules={[Navigation, Pagination]}
-          slidesPerView={window.innerWidth < 768 ? 1 : 3} // Show 3 slides by default on larger screens
+          slidesPerView={slidesPerView}
           spaceBetween={20}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
@@ -88,17 +96,22 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.05 }}
-                className={`
-                  bg-white rounded-lg my-5 mx-2 p-5 flex flex-col items-center cursor-pointer gap-3 relative
-                  ${idx === activeIndex + 1 && window.innerWidth >= 1024 ? 'bg-[#205cb4] text-white' : ''}
-                `}
+                className={`bg-white rounded-lg my-5 mx-2 p-5 flex flex-col items-center cursor-pointer gap-3 relative ${
+                  idx === activeIndex + 1 && slidesPerView === 3
+                    ? 'bg-[#205cb4] text-white'
+                    : ''
+                }`}
               >
                 <div className="flex gap-3 justify-between items-start w-full">
                   {partner.verified && (
                     <p className="flex flex-col gap-2 items-center roboto-regular text-sm">
                       <MdVerifiedUser
                         size={20}
-                        className={`${idx === activeIndex + 1 && window.innerWidth >= 1024 ? 'text-white' : 'text-green-500'}`}
+                        className={`${
+                          idx === activeIndex + 1 && slidesPerView === 3
+                            ? 'text-white'
+                            : 'text-green-500'
+                        }`}
                       />
                       Verified
                     </p>
@@ -153,7 +166,11 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
                   </div>
                 </div>
                 <Button
-                  className={`w-full bg-[#205cb4] text-white rounded-[10px] h-[36px] text-[20px] roboto-regular mt-3 ${idx === activeIndex + 1 && window.innerWidth >= 1024 ? 'bg-white text-[#205cb4]' : ''}`}
+                  className={`w-full bg-[#205cb4] text-white rounded-[10px] h-[36px] text-[20px] roboto-regular mt-3 ${
+                    idx === activeIndex + 1 && slidesPerView === 3
+                      ? 'bg-white text-[#205cb4]'
+                      : ''
+                  }`}
                   endContent={<HiArrowUpRight size={20} />}
                 >
                   See Review

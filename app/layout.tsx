@@ -1,11 +1,8 @@
 import '@/styles/globals.css';
 import { Metadata, Viewport } from 'next';
-import { Link } from '@nextui-org/link';
-import clsx from 'clsx';
 import { Red_Rose } from 'next/font/google';
 
 import { siteConfig } from '@/config/site';
-import { Providers } from './providers';
 import { Header } from '@/components/ui/header';
 import Footer from '@/components/ui/footer';
 
@@ -42,18 +39,16 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en" className={redRose.variable}>
       <head />
-      <body className={clsx(redRose.className)}>
-        <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
-          <div>
-            <div className="bg-[#205CD4]">
-              <Header />
-            </div>
-            <main>{children}</main>
-            <div>
-              <Footer />
-            </div>
+      <body>
+        <div>
+          <div className="bg-[#205CD4]">
+            <Header />
           </div>
-        </Providers>
+          <main>{children}</main>
+          <div>
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );

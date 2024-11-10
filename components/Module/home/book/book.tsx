@@ -84,8 +84,11 @@ export default function BookConsultation({ className }: BookConsultationProps) {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium">Preferred Time</label>
+              <label htmlFor="preferredTime" className="text-sm font-medium">
+                Preferred Time
+              </label>
               <Select
+                id="preferredTime"
                 placeholder="Select preferred time"
                 variant="bordered"
                 className="w-full"
@@ -97,8 +100,14 @@ export default function BookConsultation({ className }: BookConsultationProps) {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium">Preferred Date</label>
-              <DatePicker variant="bordered" className="w-full" />
+              <label htmlFor="preferredDate" className="text-sm font-medium">
+                Preferred Date
+              </label>
+              <DatePicker
+                id="preferredDate"
+                variant="bordered"
+                className="w-full"
+              />
             </div>
 
             <Button

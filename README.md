@@ -1,54 +1,40 @@
-# Next.js & NextUI Template
+# Frontend UI Task
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+This project is a frontend UI built with Next.js, TypeScript, Tailwind CSS, Framer Motion for animations, and SwiperJS for sliders. It provides a clean and responsive interface with smooth animations and an interactive image slider.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+## Live Site
+
+Check out the live site [here](https://discover-local-gems.vercel.app)
 
 ## Technologies Used
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- **Next.js** - React framework for building server-rendered applications and static websites.
+- **TypeScript** - Typed superset of JavaScript that adds static types.
+- **Tailwind CSS** - Utility-first CSS framework for rapid UI development.
+- **Framer Motion** - Animation library for React that enables easy animations and transitions.
+- **SwiperJS** - Modern mobile touch slider with hardware-accelerated transitions.
 
-## How to Use
+## Getting Started
 
-### Use the template with create-next-app
+To run this project locally, follow these steps.
 
-To create a new project based on this template using `create-next-app`, run the following command:
+### Prerequisites
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
+- Node.js (v14 or later)
+- npm or yarn
 
-### Install dependencies
+### Installation
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+1. **Clone the repository:**
 
-```bash
-npm install
-```
+   ```bash
+   git clone https://github.com/Md-Rijwan-Jannat/Discover-local-gems.git
+   cd Discover-local-gems
+   ```
 
-### Run the development server
+2. **Run local machine:**
 
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
-# Discover-local-gems
+   ```bash
+   cd bun install
+   cd bun dev
+   ```
