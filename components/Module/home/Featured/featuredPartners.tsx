@@ -71,7 +71,7 @@ const featuredSliderData = [
 
 export default function FeaturedPartners() {
   return (
-    <div className="py-5 md:py-8">
+    <div>
       <Container>
         <SectionTitle
           title="Featured Partners"

@@ -4,12 +4,12 @@ import { Button } from '@nextui-org/button';
 import React from 'react';
 import { GoSearch } from 'react-icons/go';
 import style1 from '../../../public/homeImages/style1.png';
-import style2 from '../../../public/homeImages/sty;e2.png';
+import style2 from '../../../public/homeImages/style2.png';
 import Image from 'next/image';
 
 export default function Parallax() {
   return (
-    <div className=" bg-[#205cb4]">
+    <div className=" bg-[#205cb4] my-16">
       <Container>
         <div className="relative py-10 md:py-16 x-4 text-white flex flex-col items-center">
           <SectionTitle

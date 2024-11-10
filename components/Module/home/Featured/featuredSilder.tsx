@@ -64,7 +64,7 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
   }, []);
 
   return (
-    <div className="w-full overflow-hidden pb-10 relative">
+    <div className="w-full overflow-hidden relative">
       <Container>
         <Swiper
           modules={[Navigation, Pagination]}
@@ -79,7 +79,7 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
             setIsBeginning(swiperRef.current?.isBeginning || false);
             setIsEnd(swiperRef.current?.isEnd || false);
           }}
-          className="h-[400px] md:h-[500px]"
+          className="h-full md:h-[500px]"
         >
           {featuredPartners.map((partner, idx) => (
             <SwiperSlide key={idx}>
@@ -181,14 +181,18 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="flex items-center justify-between gap-3 inset-0 absolute bottom-[90px] z-50 max-w-[1270px] mx-auto">
+        <div className="flex items-center justify-between gap-3 inset-0 absolute bottom-[60px] md:bottom-[90px] z-50 max-w-[1270px] mx-auto">
           <Button
             isIconOnly
             radius="full"
             startContent={<IoIosArrowBack size={25} />}
             onClick={handlePrevSlide}
             disabled={isBeginning}
-            className={`size-[56px] ${isBeginning ? 'bg-gray-300' : 'bg-[#205cb4] text-white hover:bg-blue-400'} border-blue-100 p-2 rounded-full`}
+            className={`${
+              isBeginning
+                ? 'bg-gray-300'
+                : 'bg-[#205cd4] text-white hover:bg-blue-400'
+            } p-3 rounded-full md:size-[56px] size-[40px]`}
           />
           <Button
             isIconOnly
@@ -196,7 +200,11 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
             startContent={<IoIosArrowForward size={25} />}
             onClick={handleNextSlide}
             disabled={isEnd}
-            className={`size-[56px] ${isEnd ? 'bg-gray-300' : 'bg-[#205cb4] text-white hover:bg-blue-400'} border-blue-100 p-2 rounded-full`}
+            className={`${
+              isEnd
+                ? 'bg-gray-300'
+                : 'bg-[#205cd4] text-white hover:bg-blue-400'
+            } p-3 rounded-full md:size-[56px] size-[40px]`}
           />
         </div>
       </Container>

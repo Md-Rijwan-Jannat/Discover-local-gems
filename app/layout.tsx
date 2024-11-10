@@ -7,6 +7,7 @@ import { Red_Rose } from 'next/font/google';
 import { siteConfig } from '@/config/site';
 import { Providers } from './providers';
 import { Header } from '@/components/ui/header';
+import Footer from '@/components/ui/footer';
 
 // Import and configure the Red Rose font
 const redRose = Red_Rose({
@@ -48,6 +49,9 @@ export default function RootLayout({
               <Header />
             </div>
             <main>{children}</main>
+            <div>
+              <Footer />
+            </div>
           </div>
         </Providers>
       </body>

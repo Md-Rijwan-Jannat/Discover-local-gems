@@ -16,7 +16,7 @@ import HeaderLinks from './headerLinks';
 export const Header = () => {
   return (
     <NextUINavbar
-      className="bg-[#205CD4] max-w-[1220px] h-[83px] mx-auto"
+      className="bg-[#205CD4] max-w-[1220px] h-[83px] mx-auto pb-5"
       isBlurred={false}
       maxWidth="xl"
       position="sticky"
