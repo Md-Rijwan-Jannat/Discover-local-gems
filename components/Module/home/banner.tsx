@@ -16,16 +16,16 @@ export default function Banner() {
     <div className="bg-[#205CD4]">
       <Container>
         <div className="text-white py-8 md:py-12 relative h-full">
-          <div className="flex flex-col md:flex-row items-center justify-between w-full">
+          <div className="flex flex-row items-center justify-between w-full">
             {/* Search Icon Animation */}
             <motion.div
-              className="flex items-center justify-center mb-4 md:mb-0 md:mr-4 w-24 h-20 md:w-[160px] md:h-[74px] bg-white rounded-full"
+              className="flex items-center justify-center md:mr-4 w-20 py-1 md:py-0 md:w-[160px] md:h-[72px] bg-white rounded-full"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
             >
               <Image
-                className="w-12 h-12 md:w-[52px]"
+                className="size-7 md:size-[50px]"
                 src={searchIcon}
                 alt="Search Icon"
                 width={500}
@@ -34,7 +34,7 @@ export default function Banner() {
             </motion.div>
             {/* Main Heading Animation */}
             <motion.h1
-              className="text-3xl sm:text-5xl md:text-6xl lg:text-[110px] font-bold leading-none text-center md:text-left whitespace-nowrap"
+              className="text-3xl md:text-6xl lg:text-[110px] font-bold leading-none text-center md:text-left whitespace-nowrap"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -43,10 +43,10 @@ export default function Banner() {
             </motion.h1>
           </div>
 
-          <div className="flex items-center justify-center md:justify-start md:-mt-3 flex-wrap">
+          <div className="flex items-center justify-start md:-mt-3 flex-wrap">
             {/* Secondary Heading Animation */}
             <motion.h1
-              className="text-3xl sm:text-5xl md:text-6xl lg:text-[110px] font-bold leading-none"
+              className="text-3xl md:text-6xl lg:text-[110px] font-bold leading-none"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
@@ -62,14 +62,14 @@ export default function Banner() {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 -mt-3">
-            <p className="w-full md:w-1/2 text-center md:text-start mt-4 text-sm sm:text-base md:text-lg lg:text-xl red-rose-regular">
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-0 md:gap-6 -mt-3">
+            <p className="w-full md:w-1/2 text-start mt-4 text-sm md:text-lg lg:text-[20px] roboto-regular">
               Find trusted local businesses that offer reliable services, unique
               products, and exceptional experiences tailored to meet your
               community&apos;s needs.
             </p>
             <motion.h1
-              className="w-full md:w-1/2 text-3xl sm:text-5xl md:text-6xl lg:text-[110px] font-bold leading-none text-center md:text-right whitespace-nowrap"
+              className="w-full md:w-1/2 md:mt-0 text-3xl md:text-6xl lg:text-[110px] font-bold leading-none text-right whitespace-nowrap"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -91,7 +91,7 @@ export default function Banner() {
                 <input
                   type="text"
                   placeholder="Search by Business Name"
-                  className="w-full px-2 py-2 text-gray-700 text-sm md:text-base focus:outline-none"
+                  className="w-full px-2 py-2 text-gray-700 text-sm md:text-base focus:outline-none roboto-regular"
                 />
               </div>
               <div className="flex items-center w-full mt-2 sm:mt-0">
@@ -99,7 +99,7 @@ export default function Banner() {
                 <input
                   type="text"
                   placeholder="Enter the Location"
-                  className="w-full px-2 py-2 text-gray-700 text-sm md:text-base focus:outline-none"
+                  className="w-full px-2 py-2 text-gray-700 text-sm md:text-base focus:outline-none roboto-regular"
                 />
               </div>
             </motion.div>
@@ -115,7 +115,7 @@ export default function Banner() {
                     className=" text-[#205CD4] red-rose-regular"
                   />
                 }
-                className="w-full sm:w-auto h-[44px] sm:h-[56px] md:w-[173px] md:h-[56px] bg-white text-[#205CD4] text-base md:text-[24px] font-semibold rounded-md md:rounded-[10px] red-rose-regular"
+                className="w-full sm:w-auto h-[44px] sm:h-[56px] md:w-[173px] md:h-[56px] bg-white text-[#205CD4] text-base md:text-[24px] font-semibold rounded-md md:rounded-[10px] roboto-regular"
                 variant="flat"
               >
                 Search
@@ -124,7 +124,7 @@ export default function Banner() {
           </div>
 
           {/* Statistics Section */}
-          <div className="mt-10 md:mt-16 flex flex-col md:flex-row justify-between text-sm md:text-lg font-semibold">
+          <div className="mt-10 md:mt-16 flex flex-wrap gap-4 flex-row items-center justify-center md:justify-between text-sm md:text-lg font-semibold">
             <motion.div
               className="flex flex-col items-center gap-4"
               initial={{ opacity: 0, y: 30 }}
@@ -132,7 +132,7 @@ export default function Banner() {
               transition={{ delay: 0.9, duration: 0.5 }}
             >
               <p className="text-2xl md:text-[44px] font-bold">2.1M+</p>
-              <p className="text-xs sm:text-sm md:text-[20px] red-rose-regular">
+              <p className="text-xs sm:text-sm md:text-[20px] roboto-regular">
                 Registered Companies
               </p>
             </motion.div>
@@ -143,7 +143,7 @@ export default function Banner() {
               transition={{ delay: 1.0, duration: 0.5 }}
             >
               <p className="text-2xl md:text-[44px] font-bold">30K+</p>
-              <p className="text-xs sm:text-sm md:text-[20px] red-rose-regular">
+              <p className="text-xs sm:text-sm md:text-[20px] roboto-regular">
                 Google Business Profiles
               </p>
             </motion.div>
@@ -154,7 +154,7 @@ export default function Banner() {
               transition={{ delay: 1.1, duration: 0.5 }}
             >
               <p className="text-2xl md:text-[44px] font-bold">24/7</p>
-              <p className="text-xs sm:text-sm md:text-[20px] red-rose-regular">
+              <p className="text-xs sm:text-sm md:text-[20px] roboto-regular">
                 Customer Service
               </p>
             </motion.div>
@@ -162,7 +162,7 @@ export default function Banner() {
 
           {/* Earth Image Animation */}
           <motion.div
-            className="absolute top-[300.14px] left-4 md:-left-[120.03px]"
+            className="absolute top-[200px] md:top-[300.14px] left-4 md:-left-[120.03px]"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, duration: 0.6 }}

@@ -20,7 +20,7 @@ export default function Home() {
       <div className="bg-primary-200/5 py-8 md:py-[100px]">
         <FeaturedPartners />
       </div>
-      <div className="mt-8 md:pt-16">
+      <div className="mt-8 md:pt-16  overflow-x-hidden">
         <Parallax />
       </div>
       <div className="pt-8 md:pt-16">

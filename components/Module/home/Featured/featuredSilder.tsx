@@ -72,7 +72,7 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
   }, []);
 
   return (
-    <div className="w-full overflow-hidden relative">
+    <div className="w-full overflow-hidden relative ,x-2">
       <Container>
         <Swiper
           modules={[Navigation, Pagination]}
@@ -96,7 +96,7 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.05 }}
-                className={`bg-white rounded-lg my-5 mx-2 p-5 flex flex-col items-center cursor-pointer gap-3 relative w-full lg:w-[370px] ${
+                className={`flex gap-4 bg-white rounded-lg my-5 p-6 flex-col items-center cursor-pointer relative w-full lg:w-[370px] ${
                   idx === activeIndex + 1 && slidesPerView === 3
                     ? 'bg-[#205cb4] text-white'
                     : ''

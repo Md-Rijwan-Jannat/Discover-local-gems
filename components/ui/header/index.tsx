@@ -42,13 +42,13 @@ export const Header = () => {
       >
         <NavbarItem className="hidden md:flex gap-2">
           <Button className="border-none roboto-medium text-[24px] w-[90px] h-[56px] bg-transparent text-white">
-            Login
+            Log In
           </Button>
           <Button
             className="roboto-medium w-[144px] h-[56px] rounded-[10px] bg-white text-primary text-[24px]"
             variant="flat"
           >
-            SignUp
+            Sign Up
           </Button>
         </NavbarItem>
       </NavbarContent>

@@ -40,7 +40,7 @@ export default function Parallax() {
                   className=" text-[#205CD4] text-2xl md:text-[32px] roboto-regular"
                 />
               }
-              className="w-full sm:w-auto h-[44px] sm:h-[56px] md:w-[173px] md:h-[56px] bg-white text-[#205CD4] text-base md:text-[24px] font-semibold rounded-[10px] md:rounded-lg roboto-regular"
+              className="h-[44px] sm:h-[56px] w-[150px] md:w-[173px] md:h-[56px] bg-white text-[#205CD4] text-base md:text-[24px] font-semibold rounded-[10px] md:rounded-lg roboto-regular"
               variant="flat"
             >
               Search
