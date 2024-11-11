@@ -14,7 +14,7 @@ export default function HeaderLinks() {
         <NavbarItem key={item.href}>
           <Link
             href={item.href}
-            className={`text-[20px] roboto-regular text-white py-3 my-2 md:my-0 md:py-[30px] border-b-4 ${
+            className={`text-[20px] red-rose-regular text-white py-3 my-2 md:my-0 md:py-[30px] border-b-4 ${
               pathname === item.href ? 'border-white' : 'border-transparent'
             } hover:border-white transition-colors duration-300`}
           >

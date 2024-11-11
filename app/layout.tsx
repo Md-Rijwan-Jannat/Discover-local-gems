@@ -1,17 +1,10 @@
 import '@/styles/globals.css';
 import { Metadata, Viewport } from 'next';
-import { Red_Rose } from 'next/font/google';
 
 import { siteConfig } from '@/config/site';
 import { Header } from '@/components/ui/header';
 import Footer from '@/components/ui/footer';
-
-// Import and configure the Red Rose font
-const redRose = Red_Rose({
-  subsets: ['latin'], // Choose the subsets you need
-  weight: ['400', '500', '700'], // Select the required weights
-  variable: '--font-red-rose', // Optional: assign a custom CSS variable name
-});
+import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: {
@@ -37,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en" className={redRose.variable}>
+    <html suppressHydrationWarning lang="en" className={'red-rose-light'}>
       <head />
       <body>
         <div>

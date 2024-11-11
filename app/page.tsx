@@ -17,19 +17,19 @@ export default function Home() {
       <div>
         <CategoryGrid />
       </div>
-      <div className="bg-primary-200/5  py-[100px]">
+      <div className="bg-primary-200/5 py-8 md:py-[100px]">
         <FeaturedPartners />
       </div>
-      <div className="pt-16">
+      <div className="mt-8 md:pt-16">
         <Parallax />
       </div>
-      <div className="pt-16">
+      <div className="pt-8 md:pt-16">
         <BusinessReviews />
       </div>
-      <div className="pt-16">
+      <div className="pt-8 md:pt-16">
         <InsightsInspiration />
       </div>
-      <div className="pt-16">
+      <div className="pt-8 md:pt-16">
         <BookConsultation />
       </div>
     </section>

@@ -194,7 +194,7 @@ const ReviewSlider: FC = () => {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <Card className="flex gap-4 bg-white rounded-lg m-5 p-6">
+                <Card className="flex gap-4 bg-white rounded-lg my-5 p-6">
                   <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="flex items-center w-full gap-2">
                       <Image
@@ -204,11 +204,11 @@ const ReviewSlider: FC = () => {
                         width={80}
                         height={80}
                       />
-                      <div className="flex flex-col items-start">
+                      <div className="flex flex-col items-start roboto-regular">
                         <h4 className="text-lg font-semibold text-gray-800">
                           {testimonial.name}
                         </h4>
-                        <p className="text-gray-500 text-sm">
+                        <p className="text-[#111827] text-sm roboto-regular">
                           {testimonial.role}
                         </p>
                       </div>
@@ -226,7 +226,9 @@ const ReviewSlider: FC = () => {
 
                   <div className="flex-1">
                     <hr className="mt-1 mb-3" />
-                    <p className="text-gray-700 my-2">{testimonial.review}</p>
+                    <p className="text-[#111827] my-2 roboto-regular">
+                      {testimonial.review}
+                    </p>
                     <hr className="mt-3 mb-1" />
                     <div className="flex items-center gap-2">
                       <Image
@@ -237,10 +239,10 @@ const ReviewSlider: FC = () => {
                         height={500}
                       />
                       <div>
-                        <h5 className="font-semibold text-[24px] text-gray-700">
+                        <h5 className="font-semibold text-[24px] text-[#111827]">
                           {testimonial.companyName}
                         </h5>
-                        <p className="text-[16px] text-gray-500">
+                        <p className="text-[16px] text-[#111827] roboto-regular">
                           {testimonial.companyWebsite}
                         </p>
                       </div>

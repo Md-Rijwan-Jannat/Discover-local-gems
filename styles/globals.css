@@ -1,13 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.roboto-regular {
-  font-family: 'Roboto', sans-serif;
+.red-rose-light {
+  font-family: 'Red Rose', serif;
+  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
 
+.red-rose-regular {
+  font-family: 'Red Rose', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.red-rose-medium {
+  font-family: 'Red Rose', serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.red-rose-bold {
+  font-family: 'Red Rose', serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .roboto-medium {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;

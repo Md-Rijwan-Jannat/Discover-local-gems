@@ -1,4 +1,6 @@
-import React, { ReactNode } from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import bank from '../../../public/homeImages/category/noun-bank-7348398 1.png';
 import travel from '../../../public/homeImages/category/Vector.png';
@@ -23,6 +25,8 @@ import { Button } from '@nextui-org/button';
 import Image from 'next/image';
 import Container from '@/components/ui/container';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 interface Category {
   icon: any;
@@ -50,58 +54,86 @@ const categories: Category[] = [
 ];
 
 const CategoryGrid = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Set up useInView hook
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
+
   return (
-    <div className="pt-10 mb-28">
+    <div className="pt-5 md:pt-10 mb-10 md:mb-28">
       <Container>
-        <div className="flex items-center justify-between gap-3 mb-10">
+        <div className="flex items-center justify-between gap-3 mb-10 red-rose-bold">
           <h3 className="md:text-[44px] text-xl">Browse by Category</h3>
           <Button
-            className="bg-[#205cb4] rounded-[10px] w-[130px] md:w-[173px] h-[40px] md:h-[56px] text-[16px] md:text-[24px] text-white roboto-regular"
+            className="bg-[#205cb4] rounded-[10px] w-[130px] md:w-[173px] h-[40px] md:h-[56px] text-[16px] md:text-[24px] text-white red-rose-regular"
             endContent={<HiArrowUpRight size={24} />}
           >
             See All
           </Button>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0 }}
+          transition={{ duration: 0.8 }}
+        >
           {categories.map((category, index) => (
-            <Card
-              className="h-[110px] px-5 py-1 flex gap-2 items-center justify-center relative"
-              as={Link}
-              href={category.link}
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="flex items-center mb-2 justify-start gap-2 w-full">
-                <Image
-                  src={category?.icon}
-                  alt="icon"
-                  width={300}
-                  height={300}
-                  className="size-12"
-                />
-                <h3 className="text-lg font-semibold">{category.title}</h3>
-              </div>
-              <div className="absolute top-0 right-0">
-                {' '}
-                <Image
-                  src={style1}
-                  alt="icon"
-                  width={300}
-                  height={300}
-                  className="h-6 w-14"
-                />
-              </div>
-              <div className="absolute bottom-0 left-0">
-                <Image
-                  src={style2}
-                  alt="icon"
-                  width={300}
-                  height={300}
-                  className="h-6 w-14"
-                />
-              </div>
-            </Card>
+              <Card className="h-[110px] px-5 py-1 flex gap-2 items-center justify-center relative">
+                <div className="flex items-center mb-2 justify-start gap-2 w-full">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Image
+                      src={category.icon}
+                      alt="icon"
+                      width={300}
+                      height={300}
+                      className="size-8 md:size-12"
+                    />
+                  </motion.div>
+                  <h3 className="text-sm md:text-lg font-semibold">
+                    {category.title}
+                  </h3>
+                </div>
+                <div className="absolute top-0 right-0">
+                  <Image
+                    src={style1}
+                    alt="icon"
+                    width={300}
+                    height={300}
+                    className="h-6 w-14"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0">
+                  <Image
+                    src={style2}
+                    alt="icon"
+                    width={300}
+                    height={300}
+                    className="h-6 w-14"
+                  />
+                </div>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Container>
     </div>
   );

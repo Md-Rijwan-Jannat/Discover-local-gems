@@ -22,13 +22,13 @@ function Footer() {
           </p>
         </div>
 
-        <hr className="my-3 border-gray-700" />
+        <hr className="my-3 border-gray-800" />
         {/* Footer Links */}
         <div className="flex flex-wrap justify-between text-center lg:text-left">
           {/* About Us */}
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h3 className="font-semibold text-lg mb-2">About Us</h3>
-            <ul className="text-sm space-y-1 roboto-regular text-[#ffffff]">
+            <ul className="text-sm space-y-3 roboto-regular text-[#ffffff]">
               <li>
                 <Link href="#" className="hover:underline">
                   - Categories
@@ -55,7 +55,7 @@ function Footer() {
           {/* Services */}
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h3 className="font-semibold text-lg mb-2">Services</h3>
-            <ul className="text-sm space-y-1 roboto-regular text-[#ffffff]">
+            <ul className="text-sm space-y-3 roboto-regular text-[#ffffff]">
               <li>
                 <Link href="#" className="hover:underline">
                   - Online Visibility
@@ -76,15 +76,20 @@ function Footer() {
                   - Marketing Consulting
                 </Link>
               </li>
+              <li>
+                <Link href="#" className="hover:underline text-blue-500">
+                  See more
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Contact Us */}
-          <div className="w-full md:w-1/4 mb-6 md:mb-0">
+          <div className="w-full flex flex-col justify-center items-center md:justify-start md:items-start md:w-1/4 mb-6 md:mb-0">
             <h3 className="font-semibold text-lg mb-2">Contact Us</h3>
-            <ul className="text-sm space-y-1 flex flex-col-reverse text-center md:items-start roboto-regular text-[#ffffff]">
-              <li className="flex gap-2 items-center">
-                <IoMdMail size={20} />
+            <ul className="text-sm roboto-regular flex flex-col-reverse md:justify-start md:items-start roboto-regular text-[#ffffff]">
+              <li className="flex gap-2 items-center mt-3">
+                <IoMdMail size={16} />
                 Email:{' '}
                 <Link
                   href="mailto:support@example.com"
@@ -93,28 +98,28 @@ function Footer() {
                   support@example.com
                 </Link>
               </li>
-              <li className="flex gap-2 items-center">
-                <MdPhonePaused size={20} />
+              <li className="flex gap-2 items-center mt-3">
+                <MdPhonePaused size={16} />
                 Phone: +1-234-567-8901
               </li>
             </ul>
             {/* Social Media Icons */}
             <div className="flex justify-center md:justify-start space-x-4 mt-4">
               <FaFacebook
-                size={20}
-                className="hover:text-blue-500 cursor-pointer"
+                size={30}
+                className="hover:text-blue-500 cursor-pointer rounded-full border p-2"
               />
               <FaTwitter
-                size={20}
-                className="hover:text-blue-400 cursor-pointer"
+                size={30}
+                className="hover:text-blue-400 cursor-pointer rounded-full border p-2"
               />
               <FaInstagram
-                size={20}
-                className="hover:text-pink-500 cursor-pointer"
+                size={30}
+                className="hover:text-pink-500 cursor-pointer rounded-full border p-2"
               />
               <FaLinkedin
-                size={20}
-                className="hover:text-blue-700 cursor-pointer"
+                size={30}
+                className="hover:text-blue-700 cursor-pointer rounded-full border p-2"
               />
             </div>
           </div>
@@ -122,14 +127,13 @@ function Footer() {
           {/* Newsletter */}
           <div className="w-full md:w-1/4">
             <h3 className="font-semibold text-lg mb-2">Newsletter</h3>
-            <p className="text-sm mb-4">Enter your email</p>
-            <div className="flex">
+            <div className="flex flex-col gap-3 items-center md:items-start">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 rounded-l-lg focus:outline-none"
+                className="w-full px-4 py-1 rounded-[10px] focus:outline-none roboto-regular"
               />
-              <button className="bg-blue-600 px-4 py-2 rounded-r-lg font-semibold">
+              <button className="bg-blue-600 text-[16px] md:text-[24px] w-[168px] h-[36px] rounded-[10px] font-semibold roboto-regular">
                 Subscribe
               </button>
             </div>
@@ -137,7 +141,7 @@ function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center text-sm">
+        <div className="mt-8 border-t border-gray-800 pt-4 flex flex-col md:flex-row justify-between items-center text-sm roboto-regular text-white">
           <p>© 2024 Het Bedrijven Platform. All Rights Reserved</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="#" className="hover:underline">

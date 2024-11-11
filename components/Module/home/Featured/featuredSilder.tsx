@@ -77,10 +77,10 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
         <Swiper
           modules={[Navigation, Pagination]}
           slidesPerView={slidesPerView}
-          spaceBetween={20}
+          spaceBetween={10}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
-            768: { slidesPerView: 2 },
+            768: { slidesPerView: 1 },
             1024: { slidesPerView: 3 },
           }}
           onSlideChange={() => {
@@ -96,7 +96,7 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.05 }}
-                className={`bg-white rounded-lg my-5 mx-2 p-5 flex flex-col items-center cursor-pointer gap-3 relative ${
+                className={`bg-white rounded-lg my-5 mx-2 p-5 flex flex-col items-center cursor-pointer gap-3 relative w-full lg:w-[370px] ${
                   idx === activeIndex + 1 && slidesPerView === 3
                     ? 'bg-[#205cb4] text-white'
                     : ''
@@ -130,9 +130,9 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
                     {partner.rating}
                   </p>
                 </div>
-                <div className="flex text-[24px] flex-col items-center justify-between">
+                <div className="flex text-[24px] flex-col items-center justify-between border-b border-gray-300 pb-3">
                   <h3 className="text-lg font-semibold">{partner.title}</h3>
-                  <p className="text-[16px] border-b pb-3 border-gray-300">
+                  <p className="text-[16px] roboto-regular">
                     {partner.description}
                   </p>
                 </div>
@@ -166,7 +166,7 @@ const FeaturedPartnerSlider: FC<FeaturedPartnerSliderProps> = ({
                   </div>
                 </div>
                 <Button
-                  className={`w-full bg-[#205cb4] text-white rounded-[10px] h-[36px] text-[20px] roboto-regular mt-3 ${
+                  className={`w-full bg-[#205cb4] text-white rounded-[10px] h-[36px] roboto-regular mt-2 ${
                     idx === activeIndex + 1 && slidesPerView === 3
                       ? 'bg-white text-[#205cb4]'
                       : ''

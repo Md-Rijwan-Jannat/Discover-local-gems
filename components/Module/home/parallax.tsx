@@ -1,5 +1,4 @@
 import Container from '@/components/ui/container';
-import SectionTitle from '@/components/ui/sectionTitle';
 import { Button } from '@nextui-org/button';
 import React from 'react';
 import { GoSearch } from 'react-icons/go';
@@ -12,19 +11,25 @@ export default function Parallax() {
     <div className=" bg-[#205cb4] my-16">
       <Container>
         <div className="relative py-10 md:py-16 x-4 text-white flex flex-col items-center">
-          <SectionTitle
-            title="Check Your Online Visibility for Free"
-            subTitle="Discover how visible your business is online with our free visibility check. Gain insights to enhance your digital presence effectively."
-          />
+          <div className="w-9/12 md:w-8/12 mb-5 mx-auto text-center">
+            <h2 className="text-2xl md:text-[44px] mb-6 text-center red-rose-bold">
+              Check Your Online Visibility for Free
+            </h2>
+            <p className="text-white my-2 roboto-regular text-sm md:text-[18px]">
+              Discover how visible your business is online with our free
+              visibility check. Gain insights to enhance your digital presence
+              effectively.
+            </p>
+          </div>
 
           {/* Search Input Section */}
           <div className="flex flex-col sm:flex-row justify-between gap-4 md:gap-6 items-center w-full max-w-2xl my-6">
             <div className="flex items-center w-full mb-2 sm:mb-0 bg-white rounded-[10px] shadow-lg px-4 py-2 ">
-              <GoSearch className="text-gray-700 text-2xl md:text-[32px] mr-2" />
+              <GoSearch className="text-[#111827] text-2xl md:text-[32px] mr-2" />
               <input
                 type="text"
-                placeholder="Search by Business Name"
-                className="w-full px-2 py-2 text-gray-700 text-sm md:text-base focus:outline-none"
+                placeholder="Search by Business Name / KVK Number"
+                className="w-full px-2 py-2 text-[#111827] roboto-regular text-sm md:text-base focus:outline-none"
               />
             </div>
 
@@ -32,7 +37,7 @@ export default function Parallax() {
               startContent={
                 <GoSearch
                   size={24}
-                  className=" text-[#205CD4] roboto-regular"
+                  className=" text-[#205CD4] text-2xl md:text-[32px] roboto-regular"
                 />
               }
               className="w-full sm:w-auto h-[44px] sm:h-[56px] md:w-[173px] md:h-[56px] bg-white text-[#205CD4] text-base md:text-[24px] font-semibold rounded-[10px] md:rounded-lg roboto-regular"
