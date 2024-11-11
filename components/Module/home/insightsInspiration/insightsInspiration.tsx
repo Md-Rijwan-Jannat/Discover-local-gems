@@ -68,7 +68,7 @@ export default function InsightsInspiration({
   const [featuredArticle, ...sidebarArticles] = articles;
 
   return (
-    <section className="bg-primary-300/5 pt-10 md:pt-20 pb-8 md:pb-16">
+    <section className="bg-primary-300/5 pt-10 md:pt-20 pb-8 md:pb-16 overflow-y-hidden">
       <Container>
         <div className="flex flex-col md:flex-row items-start gap-3 md:items-center justify-between">
           <motion.div
@@ -98,10 +98,10 @@ export default function InsightsInspiration({
             </Button>
           </motion.div>
         </div>
-        <hr className="mt-4 mb-10" />
+        <hr className="mt-4 mb-12" />
 
         <AnimatePresence>
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-3 lg:grid-cols-2">
             {/* Featured Article */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -117,11 +117,11 @@ export default function InsightsInspiration({
                 <Image
                   src={featuredArticle.image}
                   alt={featuredArticle.title}
-                  width={600}
-                  height={400}
+                  width={500}
+                  height={500}
                   className="aspect-[3/2] w-full object-cover transition-transform"
                 />
-                <div className="space-y-4 pt-6 px-5 pb-4">
+                <div className="space-y-5 pt-6 px-5 pb-4">
                   <div className="flex items-center gap-2 text-sm text-[#111827CC] md:text-[20px] roboto-regular">
                     <p>{featuredArticle.author}</p>
                     <p>•</p>
@@ -159,7 +159,7 @@ export default function InsightsInspiration({
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.2 }}
                 >
-                  <Card className="flex flex-col md:flex-row gap-4 rounded-xl">
+                  <Card className="flex flex-col md:flex-row gap-3 rounded-xl">
                     <Image
                       src={article.image}
                       alt={article.title}
